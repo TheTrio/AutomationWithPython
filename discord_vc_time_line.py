@@ -59,7 +59,7 @@ def main():
         months.append(datetime.strptime(date, "%Y-%m-%d"))
 
     for discord_id, name in names_data.items():
-        for index in range(1, 8):
+        for index in range(1, len(months) + 1):
             with open(root / f"data/{index}.json") as f:
                 curr_json_data: dict = json.load(f)
             if discord_id in curr_json_data:
