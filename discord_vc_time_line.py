@@ -38,12 +38,8 @@ from matplotlib import pyplot as plt
 root = Path(__file__).parent.parent  # change as per your wish
 
 
-def sort_default_dict(d: dict):
-    """Returns a sorted default dict created from the provided dictionary"""
-    return defaultdict(
-        lambda: timedelta(days=0, seconds=0),
-        {k: v for k, v in sorted(d.items(), key=lambda item: item[1], reverse=True)},
-    )
+def sort_dict(d: dict):
+    return {k: v for k, v in sorted(d.items(), key=lambda item: item[1], reverse=True)}
 
 
 def main():
@@ -69,7 +65,7 @@ def main():
                 data[name].append(0)
 
     # sorting the data
-    data = sort_default_dict(data)
+    data = sort_dict(data)
     for name, days in data.items():
         plt.plot(months, days, label=name)
 
