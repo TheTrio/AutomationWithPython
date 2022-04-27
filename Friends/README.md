@@ -4,7 +4,7 @@ A program that I spent way too much time on
 
 # How to Install
 
-The easiest and simplest way to install the program is through the `tar.gz` file. Download it from the releases section and then do
+The easiest and simplest way to install the program is through the `tar.gz` file. Download it from the [releases](https://github.com/TheTrio/AutomationWithPython/releases/tag/friends) section and then do
 
 ```
 pip install friends-0.1.0.tar.gz
