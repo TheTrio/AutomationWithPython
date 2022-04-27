@@ -5,36 +5,6 @@ import json
 import matplotlib.dates as mdates
 from matplotlib import pyplot as plt
 
-
-# This creates a line graph of how much time each member has spent in the VC
-# There's a config file which has to be present in the root of the project
-# The format is as follows
-# {
-#   "names": {
-#     "id1": "name1",
-#     "id2": "name2",
-#     ...
-#   },
-#   "title": "VC TIME",
-#   "dates": {
-#     "1": "YYYY-MM-DD",
-#     "2": "YYYY-MM-DD"
-#     ...
-#   }
-# }
-# There's also a data directory in the root of the project. It contains
-# a list of files, all labeled "n.json" where n is between 1 and N.
-# N and the number of dates in the config file must match.
-# These json files must contain key value pairs of the ID mentioned in the config
-# file and the time spent in the vc. The format is days, seconds
-# Example
-# {
-#   "id1": "1:35614",
-#   "id2": "2:14167",
-# }
-# To ignore a user, simply remove their ID from the config file
-# if done correctly, you should get a sweet little line graph detailing your adventures
-
 root = Path(__file__).parent.parent  # change as per your wish
 
 
